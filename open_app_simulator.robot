@@ -2,6 +2,8 @@
 Library    AppiumLibrary
 
 # robot -d results/simulator open_app_simulator.robot
+
+# nvm use
 # . .venv/bin/activate
 
 *** Test Cases ***
