@@ -1,7 +1,7 @@
 *** Settings ***
 Library    AppiumLibrary
 
-# robot -d results open_app_real_device.robot
+# robot -d results/real_device open_app_real_device.robot
 # robot --console verbose -d results open_app_real_device.robot
 # . .venv/bin/activate
 
