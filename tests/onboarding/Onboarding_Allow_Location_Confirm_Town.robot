@@ -1,14 +1,15 @@
 *** Settings ***
-Resource   ../common.resource
+Resource    onboarding.resource
 
-# cd tests/onboarding
-# nvm use
-# robot -d ../../results/simulator Onbording_Allow_Location_Confirm_Town.robot
+# robot  -d ../../results/simulator  Onboarding_Allow_Location_Confirm_Town.robot
 
 *** Test Cases ***
-Allow Location and Confirm City
+Allow Location and Confirm City on the simulator.
     [Documentation]    Onboarding and confirmation of the city
-
     launcher.Open App on simulator
-    Click Element
-
+    Allow location
+    Confirm city
+    Allow notification
+    Wait Until Page Contains Element    ru.afisha.android:id/feedRv
+    Sleep    3s
+    Close All Applications
