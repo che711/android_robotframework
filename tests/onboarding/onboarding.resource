@@ -7,6 +7,7 @@ Resource         ../../core//Data/launcher.resource
 *** Keywords ***
 Allow location
     [Documentation]    Allow location
+    Wait Until Page Contains Element    ru.afisha.android:id/fragOnboardinSubmitBtn   timeout=20s
     Wait and Click Element     ru.afisha.android:id/fragOnboardinSubmitBtn
     Wait and Click Element     com.android.permissioncontroller:id/permission_allow_foreground_only_button
     Capture Page Screenshot
