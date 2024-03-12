@@ -29,3 +29,8 @@ Open App on simulator
     ...    appium:automationName=UiAutomator2  # Add this line
     Sleep   1s
     Capture Page Screenshot
+    
+Wait and Click Element
+    [Arguments]    ${locator}
+    Wait Until Page Contains Element    ${locator}   timeout=10s
+    Click Element                       ${locator}
