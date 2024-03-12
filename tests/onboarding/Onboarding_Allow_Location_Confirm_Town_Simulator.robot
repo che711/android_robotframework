@@ -12,5 +12,5 @@ Allow Location and Confirm City on the simulator.
     Allow notification
     Wait Until Page Contains Element    ru.afisha.android:id/feedRv
     Sleep    3s
-    Close Application
+    Capture Page Screenshot
     Close All Applications
