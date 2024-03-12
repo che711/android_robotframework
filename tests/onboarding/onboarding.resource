@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Keywords for onboarding pages
 Resource         ../common.resource
-Resource         ../../Data/launcher.resource
+Resource         ../../core//Data/launcher.resource
 
 
 *** Keywords ***
