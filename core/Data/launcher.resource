@@ -3,7 +3,7 @@ Library       AppiumLibrary
 
 
 *** Keywords ***
-Open App on real device
+Open_App_on_real_device
     Open Application
     ...    remote_url=http://127.0.0.1:4723
     ...    automationName=UiAutomator2
