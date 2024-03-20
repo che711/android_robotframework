@@ -10,9 +10,9 @@ Allow Location and Confirm City on the simulator.
     launcher.Open App on real device
     Log To Console   Test log Before Allow location's keyword
     Log     Before Allow location's keyword
-    Allow location
-    Confirm city
-    Allow notification
+    onboarding.Allow location
+    onboarding.Confirm city
+    onboarding.Allow notification
     Wait Until Page Contains Element    ru.afisha.android:id/feedRv
     Sleep    3s
     Capture Page Screenshot
