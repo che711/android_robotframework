@@ -2,12 +2,12 @@
 Resource    onboarding.resource
 
 # nvm use
-# robot  -d ../../results/simulator  Onboarding_Allow_Location_Confirm_Town_Simulator.robot
+# robot  -d ../../results/real_device  Onboarding_Allow_Location_Confirm_Town_Real_device.robot
 
 *** Test Cases ***
 Allow Location and Confirm City on the simulator.
     [Documentation]    Onboarding and confirmation of the city
-    launcher.Open App on simulator
+    launcher.Open App on real device
     Log To Console   Test log Before Allow location's keyword
     Log     Before Allow location's keyword
     Allow location
@@ -17,4 +17,3 @@ Allow Location and Confirm City on the simulator.
     Sleep    3s
     Capture Page Screenshot
     Close All Applications
-
