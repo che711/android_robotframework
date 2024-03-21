@@ -14,7 +14,6 @@ Suite Setup
     [Documentation]    Actions before running test scenarios
     Set Appium Timeout      20s
 
-
 Suite Teardown
     [Documentation]    Actions after running test scenarios
     Pass Execution    message=Test cycle is finished
