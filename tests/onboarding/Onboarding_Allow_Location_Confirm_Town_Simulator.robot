@@ -1,9 +1,10 @@
 *** Settings ***
 Resource    onboarding.resource
 
-Test Setup    common.Launch App
-Test Teardown    common.Close App
-Suite Setup    common.Suite Setup
+Test Setup        common.Launch App
+Test Teardown     common.Close App
+
+Suite Setup       common.Suite Setup
 Suite Teardown    common.Suite Teardown
 
 # nvm use
