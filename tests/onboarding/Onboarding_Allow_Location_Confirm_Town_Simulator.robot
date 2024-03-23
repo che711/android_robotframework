@@ -38,3 +38,13 @@ Don't Allow Location and Confirm City.
     END
     Wait Until Page Contains Element    ${VERTICAL_PICTURE_MAIN_SCREEN}
     Capture Page Screenshot
+
+Don't Allow Location and Change City.
+    onboarding.Allow location   False
+    onboarding.Confirm city    False
+    IF   ${PLATFORM_VERSION} >= 13
+        onboarding.Allow notification
+    END
+    Wait Until Page Contains Element    ${VERTICAL_PICTURE_MAIN_SCREEN}
+    Capture Page Screenshot
+
