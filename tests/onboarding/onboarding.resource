@@ -47,5 +47,3 @@ Allow notification
     Capture Page Screenshot
     Wait and Click App Element     ${PERMISSION_ALLOW}
     Capture Page Screenshot
-
-
