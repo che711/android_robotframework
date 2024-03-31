@@ -47,5 +47,3 @@ Open Hue App.
 
 
 
-
-
