@@ -47,3 +47,4 @@ Don't Allow Location and Change City.
     END
     Wait Until Page Contains Element    ${VERTICAL_PICTURE_MAIN_SCREEN}
     Capture Page Screenshot
+
