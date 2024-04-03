@@ -13,7 +13,7 @@ ${PASSWORD_FIELD}                           //android.webkit.WebView[@text="Sign
 ${CONTINUE_BUTTON}                          //android.widget.Button[@text="Continue"]
 ${YES_CONTINUE_BUTTON}                      //android.view.View[@content-desc="Yes, continue"]
 ${START_SETUP_BUTTON}                       //android.view.View[@content-desc="Start setup"]
-${ENTER_MANUALLY_PASSPHRASE_BUTTON}         //android.view.View[@content-desc="Enter manually"]
+${ENTER_MANUALLY_PASSPHRASE_BUTTON}         //android.view.View[@class="Enter manually"]
 ${PASSPHRASE_FIELD}                         //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[3]
 
 
