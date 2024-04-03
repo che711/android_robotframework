@@ -8,14 +8,18 @@ ${I_ACCEPT_BUTTON}                          //android.view.View[@content-desc="I
 ${NEXT_BUTTON}                              //android.view.View[@content-desc="Next"]
 ${SIGNIN_BUTTON}                            //android.view.View[@content-desc="Sign in"]
 ${NEXT_BUTTON_ON_SELECT_COUNTRY_WIDGET}     //android.widget.Button[@text="Next"]
-${EMAIL_ADDRESS_FIELD}                      //android.webkit.WebView[@text="Sign in | Philips Hue"]/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.EditText
-${PASSWORD_FIELD}                           //android.webkit.WebView[@text="Sign in | Philips Hue"]/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.EditText
+${EMAIL_ADDRESS_FIELD}                      //android.widget.EditText[@hint="Email address"]
+${PASSWORD_FIELD}                           //android.widget.EditText[@hint="Password"]
 ${CONTINUE_BUTTON}                          //android.widget.Button[@text="Continue"]
 ${YES_CONTINUE_BUTTON}                      //android.view.View[@content-desc="Yes, continue"]
 ${START_SETUP_BUTTON}                       //android.view.View[@content-desc="Start setup"]
-${ENTER_MANUALLY_PASSPHRASE_BUTTON}         //android.view.View[@class="Enter manually"]
-${PASSPHRASE_FIELD}                         //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[3]
-
+${ENTER_MANUALLY_PASSPHRASE_BUTTON}         //android.view.View[@content-desc="Enter manually"]
+${PASSPHRASE_FIELD}                         //android.widget.EditText[@hint='super secret secure undefeatable passphrase']
+${YES_TURN_THEM_ON}                         //android.view.View[@content-desc="Yes, turn them on"]
+${PERMISSION_ALLOW_BUTTON}                  com.android.permissioncontroller:id/permission_allow_button
+${SKIP_BUTTON}                              //android.view.View[@content-desc="Skip"]
+${DONE_BUTTON}                             //android.view.View[@content-desc="Done"]
+${SECURITY_BUTTON}                         //android.view.View[@content-desc="SECURITY"]
 
 
 
