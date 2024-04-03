@@ -8,7 +8,7 @@ Suite Setup       common.Suite Setup
 Suite Teardown    common.Suite Teardown
 
 # nvm use
-# robot  -d ../../results/simulator  Onboarding_Allow_Location_Confirm_Town_Simulator.robot
+# robot  -d ../../results/onboarding  Onboarding_Allow_Location_Confirm_Town_Simulator.robot
 
 *** Test Cases ***
 Allow Location and Confirm City.

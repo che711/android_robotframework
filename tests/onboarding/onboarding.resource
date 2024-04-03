@@ -4,6 +4,16 @@ Resource         ../common.resource
 
 
 *** Keywords ***
+Allow Location and Change City.
+    Allow location
+    Confirm city    False
+    IF   ${PLATFORM_VERSION} >= 13
+        Allow notification
+    END
+    Wait Until Page Contains Element    ${VERTICAL_PICTURE_MAIN_SCREEN}
+    Capture Page Screenshot
+
+
 Allow Location
     [Documentation]            Allow location
     [Arguments]     ${allow_using_location}='True'
