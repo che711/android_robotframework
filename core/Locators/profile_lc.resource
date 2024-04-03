@@ -11,7 +11,7 @@ ${ALREADY_REGISTRATION_BTN}           //android.widget.TextView[@text="Я уже
 
 ${LOGIN_FIELD}                        //android.widget.EditText[@hint="Почта"]
 ${PASSWORD_FIELD}                     //android.widget.EditText[@hint="Пароль"]
-${REGISTRATION_BTN}                   //android.widget.Button[@text="Зарегистрироваться"]
-${FINISH_REGISTRATION_FIELD}                   //android.widget.TextView[@text="Завершение регистрации"]
+${COMPLETE_REGISTRATION_BTN}                   //android.widget.Button[@text="Зарегистрироваться"]
+${FINISH_REGISTRATION_FIELD}          //android.widget.TextView[@text="Завершение регистрации"]
 
 

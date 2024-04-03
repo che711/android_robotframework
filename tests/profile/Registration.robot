@@ -10,6 +10,10 @@ Suite Teardown    common.Suite Teardown
 # nvm use
 # robot  -d ../../results/profile  Registration.robot
 
+*** Variables ***
+${email}             laasaqwerdauru-2951@yopmail.com
+${password}          Qwerty123
+
 *** Test Cases ***
 Profile Test
     Input Email And Password
@@ -20,10 +24,10 @@ Profile Test
 *** Keywords ***
 Input Email And Password
     [Documentation]    Input Email And Password
-    Input Text         ${LOGIN_FIELD}       text=latrasaauru-2951@yopmail.com
-    Input Password     ${PASSWORD_FIELD}    text=Qwerty123
+    Input Text         ${LOGIN_FIELD}       text=${email}
+    Input Password     ${PASSWORD_FIELD}    text=${password}
 
 Push Registration Button
-    Click Element    //android.widget.Button[@text="Зарегистрироваться"]
-
+    Click Element     ${COMPLETE_REGISTRATION_BTN}
+    Capture Page Screenshot
 
