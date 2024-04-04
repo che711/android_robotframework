@@ -6,3 +6,4 @@ Resource      Data/launcher.resource
 Resource    Locators/android_lc.resource
 Resource    Locators/onboarding_lc.resource
 Resource    Locators/vertical_lc.resource
+Resource    Locators/profile_lc.resource
