@@ -5,17 +5,17 @@ Documentation    Login test for Hue Application
 Test Setup        Open App
 
 # nvm use
-# robot  -d results  test_login.robot
+# robot  -d results/onboarding  test_login.robot
 
 
 *** Variables ***
-${email_address}       ph180324_prod@yopmail.com     # test_automation_account@yopmail.com
+${email_address}       ph180324_prod@yopmail.com
 ${password}            123456asd+
 ${passphrase}          strength upstairs compound dollop hanky wrist obstinate depose skeleton mummy
 
 
 *** Test Cases ***
-Open Hue App.
+Onboarding on Hue's App.
     Wait and Click App Element    ${GET_STARTED_BUTTON}
     Wait and Click App Element    ${I_ACCEPT_BUTTON}
     Wait and Click App Element    ${NEXT_BUTTON}
@@ -34,7 +34,6 @@ Open Hue App.
     Wait and Click App Element     ${NEXT_BUTTON}
     Wait and Click App Element     ${ENTER_MANUALLY_PASSPHRASE_BUTTON}
 
-    Sleep  1s
     Input Text                     ${PASSPHRASE_FIELD}    ${passphrase}
     Hide Keyboard
     Wait and Click App Element     ${NEXT_BUTTON}
