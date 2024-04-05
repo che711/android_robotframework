@@ -7,7 +7,7 @@ Suite Teardown    common.Suite Teardown
 Test Setup        profile.Preconditions: At Registration Form
 Test Teardown     common.Close App
 
-Variables         ../../variables.py
+#Variables         ../../variables.py
 
 # nvm use
 # robot  -d ../../results/profile  Registration.robot
@@ -15,6 +15,7 @@ Variables         ../../variables.py
 *** Variables ***
 #${email}             laasaqwerdauru-2951@yopmail.com
 #${password}          Qwerty123
+
 
 *** Test Cases ***
 Profile Test
@@ -26,8 +27,8 @@ Profile Test
 *** Keywords ***
 Input Email And Password
     [Documentation]    Input Email And Password
-    Input Text         ${LOGIN_FIELD}       text=${email}
-    Input Password     ${PASSWORD_FIELD}    text=${password}
+    Input Text         ${LOGIN_FIELD}       text=%{email}
+    Input Password     ${PASSWORD_FIELD}    text=%{password}
 
 Push Registration Button
     Click Element     ${COMPLETE_REGISTRATION_BTN}
