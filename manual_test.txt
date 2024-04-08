@@ -1,0 +1,7 @@
+Test_1
+Prerequisites: An unauthorized user is on "Registration" screen
+Steps:
+1. Enter an unregistered Email/Password
+2. Click "Register" button
+Expected result: The "Registration Completion" window will open
+

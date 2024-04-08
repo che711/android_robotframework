@@ -1,24 +1,60 @@
 *** Settings ***
 Documentation    Keywords for onboarding pages
 Resource         ../common.resource
-Resource         ../../core//Data/launcher.resource
 
 
 *** Keywords ***
-Allow location
-    [Documentation]    Allow location
-    Wait Until Page Contains Element    ru.afisha.android:id/fragOnboardinSubmitBtn   timeout=20s
-    Wait and Click Element     ru.afisha.android:id/fragOnboardinSubmitBtn
-    Wait and Click Element     com.android.permissioncontroller:id/permission_allow_foreground_only_button
+Allow Location and Change City.
+    Allow location
+    Confirm city    False
+    IF   ${PLATFORM_VERSION} >= 13
+        Allow notification
+    END
+    Wait Until Page Contains Element    ${VERTICAL_PICTURE_MAIN_SCREEN}
     Capture Page Screenshot
+
+
+Allow Location
+    [Documentation]            Allow location
+    [Arguments]     ${allow_using_location}='True'
+    Wait and Click App Element         ${ONBOARDING_SUBMIT_BUTTON}
+    IF   ${allow_using_location} == 'True'
+        IF   ${PLATFORM_VERSION} > 9
+            Wait and Click App Element     ${PERMISSION_FOREGROUND}
+            BuiltIn.Sleep  1s
+            Capture Page Screenshot
+        ELSE IF   ${PLATFORM_VERSION} <= 9
+            Wait and Click App Element      ${PERMISSION_ALLOW_OLD}
+            BuiltIn.Sleep  1s
+            Capture Page Screenshot
+        END
+    ELSE
+        Wait and Click App Element   ${DONT_ALLOW_BUTTON}
+        BuiltIn.Sleep  1s
+        Capture Page Screenshot
+    END
 
 Confirm city
-    [Documentation]    Confirm city
-    Wait and Click Element     android:id/button1
-    Capture Page Screenshot
+    [Documentation]            Confirm city
+    [Arguments]    ${city}='True'
+    IF  ${city}=='True'
+        Wait and Click App Element     ${ONBOARDING_CONFIRM_CITY_BUTTON_YES}
+        BuiltIn.Sleep  1s
+        Capture Page Screenshot
+    ELSE
+        BuiltIn.Sleep  1s
+        Wait and Click App Element     ${ONBOARDING_CONFIRM_CITY_BUTTON_NO}
+        BuiltIn.Sleep  1s
+        Capture Page Screenshot
+        Wait and Click App Element     ${MOSCOW_CITY}
+        BuiltIn.Sleep  1s
+        Capture Page Screenshot
+    END
 
 Allow notification
-    [Documentation]   Allow notification
-    Wait and Click Element     ru.afisha.android:id/fragOnboardinSubmitBtn
-    Wait and Click Element     com.android.permissioncontroller:id/permission_allow_button
+    [Documentation]            Allow notification
+    Wait and Click App Element     ${ONBOARDING_SUBMIT_BUTTON}
     Capture Page Screenshot
+    Wait and Click App Element     ${PERMISSION_ALLOW}
+    Capture Page Screenshot
+
