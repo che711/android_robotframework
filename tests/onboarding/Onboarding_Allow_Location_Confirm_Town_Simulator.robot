@@ -17,3 +17,5 @@ Allow Location and Confirm City on the simulator.
     Sleep    3s
     Capture Page Screenshot
     Close All Applications
+
+
