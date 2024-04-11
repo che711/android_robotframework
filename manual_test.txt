@@ -5,3 +5,9 @@ Steps:
 2. Click "Register" button
 Expected result: The "Registration Completion" window will open
 
+Test_2
+1. Open stories panel
+2. Move to next slide with tap on the right sideo of the screen
+Expected result: Should be displayed next slide
+
+
