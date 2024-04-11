@@ -1,5 +1,5 @@
 *** Settings ***
-Resource      tests/common.resource
+Resource          ../tests/common.resource
 
 Suite Setup       common.Suite Setup
 Suite Teardown    common.Suite Teardown
