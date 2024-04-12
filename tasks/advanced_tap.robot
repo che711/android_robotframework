@@ -38,12 +38,12 @@ Switch slide by tap
     Sleep  2s
     Capture Page Screenshot
 
-Multiple Fingers Tap
-    ${firstFinger}          Create List    1000    1400
-    ${secondFinger}         Create List     100    100
-    @{fingerPositions}      Create List    ${firstFinger}  ${secondFinger}
-    Tap With Positions      100    @{fingerPositions}
-    Sleep  1s
-    Capture Page Screenshot
+#Multiple Fingers Tap
+#    ${firstFinger}          Create List    1000    1400
+#    ${secondFinger}         Create List     100    100
+#    @{fingerPositions}      Create List    ${firstFinger}  ${secondFinger}
+#    Tap With Positions      100    @{fingerPositions}
+#    Sleep  1s
+#    Capture Page Screenshot
 
     
