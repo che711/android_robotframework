@@ -15,6 +15,19 @@ Introdaction To Tap With Position
 
     Switch slide by tap    "right"
 
+Find Last Slide
+    [Documentation]     Find the last slide in the stories
+    Wait And Click App Element        ${FIRST_VIEW_STORIES}
+    Wait Until Element Is Visible     ${PICTURE_FIRST_VIEW_STORIES}
+    
+    FOR  ${i}   IN RANGE  15
+        ${is_element_present}=   Run Keyword And Return Status
+        ...    Wait Until Element Is Visible    ${BTN_VIEW_STORIES}    timeout=1s
+        IF  ${is_element_present}   BREAK
+        Switch slide by tap    "right"
+    END
+    Page Should Contain Element    ${BTN_VIEW_STORIES}
+    Sleep   3s
 
 
 *** Keywords ***
@@ -35,7 +48,6 @@ Switch slide by tap
 
     ${firstFinger}        Create List    ${x}   ${y}
     Tap With Positions   100   ${firstFinger}
-    Sleep  2s
     Capture Page Screenshot
 
 #Multiple Fingers Tap

@@ -9,5 +9,7 @@ ${FAVORITES}                              ru.afisha.android:id/itemTileFavoriteB
 ${DAILY_SCREEN}                           ru.afisha.android:id/itemHeaderTitleTv
 ${FIRST_VIEW_STORIES}                     ru.afisha.android:id/itemStoryImage
 ${PICTURE_FIRST_VIEW_STORIES}             ru.afisha.android:id/fragStoriesIv
+${BTN_VIEW_STORIES}                       ru.afisha.android:id/fragStoriesTitleWidgetBtn
+${LAST_VIEW_STORIES}                      ru.afisha.android:id/fragStoriesTitleWidgetTv
 
 
