@@ -7,19 +7,29 @@ Suite Teardown    common.Suite Teardown
 Test Setup        common.Launch App With Geo
 Test Teardown     common.Close App
 
+# robot  -d ../results/cycles  advanced_tap.robot
+
 *** Tasks ***
-Introdaction To Tap With Position
-    Wait And Click App Element        ${FIRST_VIEW_STORIES}
-    Sleep    1s
-    Wait Until Element Is Visible     ${PICTURE_FIRST_VIEW_STORIES}
+#Introdaction To Tap With Position
+#    Wait And Click App Element        ${FIRST_VIEW_STORIES}
+#    Sleep    1s
+#    Wait Until Element Is Visible     ${PICTURE_FIRST_VIEW_STORIES}
+#    Switch slide by tap    "right"
 
-    Switch slide by tap    "right"
+Check Viewed Story
+    [Documentation]   Check that the story was viewed
+    Find Last Slide
+    Go Back And Refresh View
+    Sleep   5s
 
+
+
+*** Keywords ***
 Find Last Slide
     [Documentation]     Find the last slide in the stories
     Wait And Click App Element        ${FIRST_VIEW_STORIES}
     Wait Until Element Is Visible     ${PICTURE_FIRST_VIEW_STORIES}
-    
+
     FOR  ${i}   IN RANGE  15
         ${is_element_present}=   Run Keyword And Return Status
         ...    Wait Until Element Is Visible    ${BTN_VIEW_STORIES}    timeout=1s
@@ -29,8 +39,6 @@ Find Last Slide
     Page Should Contain Element    ${BTN_VIEW_STORIES}
     Sleep   3s
 
-
-*** Keywords ***
 Switch slide by tap
     [Arguments]    ${side}
     [Documentation]     Tap an element with position
@@ -58,4 +66,16 @@ Multiple Fingers Tap
     Sleep  1s
     Capture Page Screenshot
 
-    
+Go back and refresh view
+    [Documentation]     Move back and refresh cache
+    Press Keycode    4
+    Page Should Contain Element        ${MARK_VIEW_STORIE_ON_SCREEN}
+    ${stories_ text}=      Get Element Attribute    ${ITEM_STORY_TITLE}    attribute=text
+    Log     ${stories_text}
+    Terminate Application              ${APP_PACKAGE}
+    Activate Application               ${APP_PACKAGE}
+    Wait Until Page Contains Element    ${FIRST_VIEW_STORIES}
+    Sleep    5s
+    Page Should Not Contain Element        ${MARK_VIEW_STORIE_ON_SCREEN}
+#    Page Should Not Contain Text           ${stories_ text}
+
