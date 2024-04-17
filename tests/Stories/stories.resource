@@ -1,20 +1,14 @@
 *** Settings ***
-Resource          ../tests/common.resource
+Documentation        This is a sample test suite for a mobile application
+Resource             ../common.resource
 
-Suite Setup       common.Suite Setup
-Suite Teardown    common.Suite Teardown
 
-Test Setup        common.Launch App With Geo
-Test Teardown     common.Close App
-
-# robot  -d ../results/cycles  advanced_tap.robot
-
-*** Tasks ***
-#Introdaction To Tap With Position
-#    Wait And Click App Element        ${FIRST_VIEW_STORIES}
-#    Sleep    1s
-#    Wait Until Element Is Visible     ${PICTURE_FIRST_VIEW_STORIES}
-#    Switch slide by tap    "right"
+*** Keywords ***
+Introdaction To Tap With Position
+    Wait And Click App Element        ${FIRST_VIEW_STORIES}
+    Sleep    1s
+    Wait Until Element Is Visible     ${PICTURE_FIRST_VIEW_STORIES}
+    Switch slide by tap    "right"
 
 Check Viewed Story
     [Documentation]   Check that the story was viewed
@@ -22,9 +16,6 @@ Check Viewed Story
     Go Back And Refresh View
     Sleep   5s
 
-
-
-*** Keywords ***
 Find Last Slide
     [Documentation]     Find the last slide in the stories
     Wait And Click App Element        ${FIRST_VIEW_STORIES}
@@ -78,4 +69,5 @@ Go back and refresh view
     Sleep    5s
     Page Should Not Contain Element        ${MARK_VIEW_STORIE_ON_SCREEN}
 #    Page Should Not Contain Text           ${stories_ text}
+
 
