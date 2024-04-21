@@ -13,3 +13,4 @@ Test Teardown     common.Close App
 Test Check Stories
     [Documentation]    Open Stories
     Introdaction To Tap With Position
+
