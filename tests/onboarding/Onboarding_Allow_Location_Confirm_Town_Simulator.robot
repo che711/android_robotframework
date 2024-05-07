@@ -14,6 +14,7 @@ Suite Teardown    common.Suite Teardown
 
 *** Test Cases ***
 Allow Location and Confirm City.
+#    Start Screen Recording    timeLimit=120   bugreport=${True}    # the test doesn't work with it, need to figure out
     onboarding.Allow location
     onboarding.Confirm city
     IF   ${PLATFORM_VERSION} >= 13
@@ -22,6 +23,7 @@ Allow Location and Confirm City.
     Wait Until Page Contains Element    ${VERTICAL_PICTURE_MAIN_SCREEN}
     Sleep    2s
     Capture Page Screenshot
+#    Stop Screen Recording       # doesn't work, need to figure out
 
 Allow Location and Change City.
     onboarding.Allow location
