@@ -24,6 +24,10 @@ Open App
     ...    udid=${UDID}
     ...    appPackage=${APP_PACKAGE}
     ...    appActivity=${APP_ACTIVITY}
+    ...    autoGrantPermissions=true
+    ...    noReset=true
+    ...    fullReset=false
+    
     Capture Page Screenshot
     
 Wait and Click App Element
