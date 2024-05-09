@@ -26,6 +26,10 @@ Allow Location and Confirm City.
     Capture Page Screenshot
     Stop Screen Recording       # doesn't work, need to figure out
 
+#    can be helpful next links:
+#     - https://github.com/serhatbolsu/robotframework-appiumlibrary/issues/413
+#     - https://github.com/serhatbolsu/robotframework-appiumlibrary/pull/414
+
 Allow Location and Change City.
     onboarding.Allow location
     onboarding.Confirm city    False
