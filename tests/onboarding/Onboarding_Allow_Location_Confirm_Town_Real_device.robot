@@ -22,3 +22,5 @@ Allow Location and Confirm City on the simulator.
     onboarding.Allow notification
     Wait Until Page Contains Element    ${VERTICAL_PICTURE_MAIN_SCREEN}
     Sleep    2s
+
+
