@@ -26,7 +26,6 @@ Open App
     ...    udid=${UDID}
     ...    appPackage=${APP_PACKAGE}
     ...    appActivity=${APP_ACTIVITY}
-    Capture Page Screenshot
 
 
 Onboarding
