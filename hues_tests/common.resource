@@ -11,8 +11,8 @@ ${PLATFORM_NAME}      Android
 ${APP_PACKAGE}        com.philips.lighting.hue2
 ${APP_ACTIVITY}       com.philips.lighting.hue2.ContentActivity
 ${PLATFORM_VERSION}   13  # 8 or 13
-${DEVICE_NAME}        emulator-5554   # emulator-5554 and RF8N20V1N7E for platform_version==13
-${UDID}               emulator-5554   # emulator-5554 and RF8N20V1N7E for platform_version==13
+${DEVICE_NAME}        RF8N20V1N7E   # emulator-5554 and RF8N20V1N7E for platform_version==13
+${UDID}               RF8N20V1N7E   # emulator-5554 and RF8N20V1N7E for platform_version==13
 
 
 *** Keywords ***
@@ -35,7 +35,7 @@ Onboarding
     Wait and Click App Element    ${I_ACCEPT_BUTTON}
     Wait and Click App Element    ${NEXT_BUTTON}
     Wait and Click App Element    ${SIGNIN_BUTTON}
-    Wait and Click App Element    ${NEXT_BUTTON_ON_SELECT_COUNTRY_WIDGET}
+    Wait and Click App Element    ${NEXT_BUTTON}   # ${NEXT_BUTTON_ON_SELECT_COUNTRY_WIDGET}
 
     Sleep    1s
     Input Text                    ${EMAIL_ADDRESS_FIELD}    ${email_address}
@@ -61,6 +61,15 @@ Onboarding
     Capture Page Screenshot
     Wait Until Page Contains Element    ${SECURITY_BUTTON}
     Capture Page Screenshot
+
+
+    @{firstFinger}    create list   ${100}      ${500}
+    @{secondFinger}   create list   ${700}      ${500}
+    @{fingerPositions}    create list   ${firstFinger}    ${secondFinger}
+    Sleep   1s
+    Tap with Positions    ${1000}     @{fingerPositions}
+
+
 
 Wait and Click App Element
     [Arguments]    ${locator}
