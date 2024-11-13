@@ -13,3 +13,6 @@ Preconditions: At Registration Form
     Wait And Click App Element               ${REGISTRATION_BTN}
     Wait Until Page Contains Element         ${ALREADY_REGISTRATION_BTN}
 
+
+
+
