@@ -24,3 +24,4 @@ Suite Setup
 Suite Teardown
     [Documentation]    Actions after running test scenarios
     Pass Execution    message=Test cycle is finished
+
