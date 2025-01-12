@@ -44,6 +44,3 @@ Open Hue App.
     Capture Page Screenshot
     Close Application
 
-
-
-
