@@ -43,4 +43,3 @@ Open Hue App.
     Sleep    3s
     Capture Page Screenshot
     Close Application
-
