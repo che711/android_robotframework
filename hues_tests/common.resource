@@ -75,4 +75,3 @@ Wait and Click App Element
     [Arguments]    ${locator}
     Wait Until Page Contains Element    ${locator}   timeout=10s
     Click Element                       ${locator}
-
