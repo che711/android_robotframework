@@ -20,9 +20,3 @@ ${PERMISSION_ALLOW_BUTTON}                  com.android.permissioncontroller:id/
 ${SKIP_BUTTON}                              //android.view.View[@content-desc="Skip"]
 ${DONE_BUTTON}                              //android.view.View[@content-desc="Done"]
 ${SECURITY_BUTTON}                          //android.view.View[@content-desc="SECURITY"]
-
-
-
-
-
-
